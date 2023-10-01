@@ -23,7 +23,6 @@ services:
   webserver:
     image: nginx:alpine
     container_name: webserver
-    restart: unless-stopped
     tty: true
     ports:
       - "80:80"
@@ -38,7 +37,6 @@ services:
   db:
     image: mysql:8.0
     container_name: db
-    restart: unless-stopped
     tty: true
     ports:
       - "3306:3306"
@@ -74,10 +72,10 @@ services:
       dockerfile: ./.docker/prod/supervisor/Dockerfile
     container_name: supervisor
     volumes:
-     - ./:/var/www
-     - ./.docker/prod/supervisor/supervisord.conf:/etc/supervisor/supervisord.conf
+      - ./:/var/www
+      - ./.docker/prod/supervisor/supervisord.conf:/etc/supervisor/supervisord.conf
     networks:
-     - api
+      - api
   laravel-echo-server:
     image: oanhnn/laravel-echo-server:latest
     # environment:
@@ -86,7 +84,6 @@ services:
     #   LARAVEL_ECHO_SERVER_DATABASE:  sqlite
     ports:
       - 6001:6001
-    restart: unless-stopped
     volumes:
       - ./laravel-echo-server.json:/app/laravel-echo-server.json:ro
     healthcheck:
