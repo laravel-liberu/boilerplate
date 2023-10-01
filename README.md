@@ -20,7 +20,7 @@
 
 2. Next, make a copy of the `.env.example` file and rename it as `.env`. Open the `.env` file and update the necessary details according to your specific configuration.
 
-3. Run the command `composer install` to install the project dependencies. If you are using Windows, you may need to run `composer install --ignore-platform-reqs` instead.
+3. Run the command `composer install` to install the project dependencies. If you are using Windows, you may need to run `composer install --ignore-platform-reqs` instead. For docker get into container first with `docker exec -it app bash`.
 
 4. Generate an application key by executing the command `php artisan key:generate`
 
