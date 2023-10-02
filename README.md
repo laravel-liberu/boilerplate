@@ -16,7 +16,7 @@
 
 ### Installation steps
 
-1. Begin by downloading the project using the command `git clone https://github.com/laravel-liberu/genealogy.git`
+1. Begin by downloading the project using the command `git clone https://github.com/laravel-liberu/boilerplate.git`
 
 2. Next, make a copy of the `.env.example` file and rename it as `.env`. Open the `.env` file and update the necessary details according to your specific configuration.
 
@@ -32,7 +32,7 @@
 
 8. For certain configurations, you may need to set up sanctum stateful domains and session domain in the `.env` file. Additionally, add your domains to the `config/cors.php` file.
 
-9. Lastly, follow the installation steps for the client side by visiting the link provided: https://github.com/liberu-ui/genealogy.
+9. Lastly, follow the installation steps for the client side by visiting the link provided: https://github.com/liberu-ui/boilerplate.
 
 10. Launch the site and log into the project using the following credentials:
 
