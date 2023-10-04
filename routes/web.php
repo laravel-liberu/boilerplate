@@ -53,4 +53,5 @@ Route::get('/socketTest', function () {
  * Route::post('messages/{id}', 'ChatsController@sendMessage');
  * });.
  */
+Route::view('/', 'index')->where('any', '.*');
 Route::view('/{any}', 'index')->where('any', '.*');

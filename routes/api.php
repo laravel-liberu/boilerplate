@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\JsonResponse;
 
 
 /*
@@ -27,4 +27,12 @@ Route::namespace('Auth')
             Route::post('login', fn(Request $request) => (new LoginController())->login($request))->name('login');
         });
 
+        Route::middleware('auth')->group(function () {
+            Route::post('logout', fn(Request $request) => (new LoginController())->logout($request))->name('logout');
+        });
+        Route::post('confirm_checkout', fn(Request $request) => (new LoginController())->confirmSubscription($request));
+
+        Route::post('register', fn(Request $request) => (new RegisterController())->create($request));
+        Route::get('get-subscription-plan', [RegisterController::class, 'getSubscriptionPlan']);
+        Route::post('verify', [RegisterController::class, 'verify_user']);
     });
