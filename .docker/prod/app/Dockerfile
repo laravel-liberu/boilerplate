@@ -21,7 +21,7 @@
 FROM php:8.2-fpm-bullseye
 
 ARG BIN_DIR=/usr/local/bin
-ARG COMPOSER_VERSION=2.0.4
+ARG COMPOSER_VERSION=2.5.5
 # Set working directory
 COPY . /var/www/
 COPY ./.env.example /var/www/.env
