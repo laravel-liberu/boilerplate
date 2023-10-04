@@ -22,7 +22,7 @@ Route::namespace('Auth')
     ->group(function () {
         Route::middleware('guest')->group(function () {
             Route::get('login/{provider}', fn($provider) => (new LoginController())->redirectToProvider($provider))->name('login.provider');
-            Route::get('login/{provider}/callback', fn($provider): JsonResponse => (new LoginController())->handleProviderCallback($provider))->name('login.provider.callback');
+            Route::get('login/{provider}/callback', fn($provider): JsonResponse => (new LoginController())->providerCallback($provider))->name('login.provider.callback');
 
             Route::post('login', fn(Request $request) => (new LoginController())->login($request))->name('login');
         });
