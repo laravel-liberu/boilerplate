@@ -23,7 +23,6 @@ trait Login
             if ($request->attributes->get('sanctum')) {
                 $request->session()->put('auth.password_confirmed_at', time());
             }
-
             return $this->sendLoginResponse($request);
         }
 
