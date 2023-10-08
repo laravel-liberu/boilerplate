@@ -1,20 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use App\Models\UserSocial;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Jobs\Tenant\CreateDBs;
 use App\Jobs\Tenant\Migration;
-use LaravelEnso\Core\Traits\Login;
-use LaravelEnso\Roles\Models\Role;
-use LaravelEnso\Core\Traits\Logout;
-use Illuminate\Support\Facades\Auth;
-use LaravelEnso\People\Models\Person;
-use LaravelEnso\Companies\Models\Company;
-use LaravelEnso\UserGroups\Models\UserGroup;
+use App\Models\Company;
+use App\Models\Person;
+use App\Models\Tenant;
+use App\Models\User;
+use App\Models\UserSocial;
+use App\Traits\Login;
+use Exception;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
+use Laravel\Socialite\Facades\Socialite;
+use LaravelEnso\Core\Events\Login as Event;
+use LaravelEnso\Core\Traits\Logout;
+use LaravelEnso\Roles\Models\Role;
+use LaravelEnso\UserGroups\Models\UserGroup;
 
 
 class LoginController extends Controller
@@ -26,21 +34,77 @@ class LoginController extends Controller
         Logout::logout insteadof AuthenticatesUsers;
         Login::login insteadof AuthenticatesUsers;
     }
-
+    
     private ?User $user = null;
-
+    
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
         $this->maxAttempts = config('enso.auth.maxLoginAttempts');
     }
     
-    // public function redirect($servive)
-    // {
-        //     return Socialite::driver($service)->redirect();
-        // }
-        
-        
+    public function redirect($servive)
+    {
+        return Socialite::driver($service)->redirect();
+    }
+    
+    //methodes used by login trait :
+
+    //these three methods are used within the login trait (which handles user login via credentials) it's all done in the Router
+    protected function validateLogin(Request $request)
+    {
+        $attributes = [
+            $this->username() => 'required|string',
+            'password' => 'required|string',
+        ];
+
+        if (!$request->attributes->get('sanctum')) {
+            $attributes['device_name'] = 'required|string';
+        }
+
+        $request->validate($attributes);
+    }
+
+    protected function attemptLogin(Request $request): bool
+    {
+        $this->user = $this->loggableUser($request);
+
+        if (!$this->user) {
+            return false;
+        }
+
+        if ($request->attributes->get('sanctum')) {
+            Auth::guard('web')->login($this->user, $request->input('remember'));
+        }
+
+        Event::dispatch($this->user, $request->ip(), $request->header('User-Agent'));
+
+        return true;
+    }
+
+    protected function sendLoginResponse(Request $request)
+    {
+        $this->clearLoginAttempts($request);
+
+        if ($request->attributes->get('sanctum')) {
+            $request->session()->regenerate();
+
+            return [
+                'auth' => Auth::check(),
+                'csrfToken' => csrf_token(),
+                'role_id' => Auth::user()->role_id,
+            ];
+        }
+
+        $token = $this->user->createToken($request->get('device_name'));
+
+        return response()->json(['token' => $token->plainTextToken])
+            ->cookie('webview', true)
+            ->cookie('Authorization', $token->plainTextToken);
+    }
+    ///////////////////////////////////
+    
+    
     //validate if the the provider is expected (facebook, google, github) 
     protected function validateProvider($provider)
     {
@@ -129,44 +193,6 @@ class LoginController extends Controller
         return response()->json($user);
     }
 
-    protected function attemptLogin(Request $request): bool
-    {
-        $this->user = $this->loggableUser($request);
-
-        if (!$this->user) {
-            return false;
-        }
-
-        if ($request->attributes->get('sanctum')) {
-            Auth::guard('web')->login($this->user, $request->input('remember'));
-        }
-
-        Event::dispatch($this->user, $request->ip(), $request->header('User-Agent'));
-
-        return true;
-    }
-
-    protected function sendLoginResponse(Request $request)
-    {
-        $this->clearLoginAttempts($request);
-
-        if ($request->attributes->get('sanctum')) {
-            $request->session()->regenerate();
-
-            return [
-                'auth' => Auth::check(),
-                'csrfToken' => csrf_token(),
-                'role_id' => Auth::user()->role_id,
-            ];
-        }
-
-        $token = $this->user->createToken($request->get('device_name'));
-
-        return response()->json(['token' => $token->plainTextToken])
-            ->cookie('webview', true)
-            ->cookie('Authorization', $token->plainTextToken);
-    }
-
     protected function authenticated(Request $request, $user)
     {
         return response()->json([
@@ -176,19 +202,6 @@ class LoginController extends Controller
         ]);
     }
 
-    protected function validateLogin(Request $request)
-    {
-        $attributes = [
-            $this->username() => 'required|string',
-            'password' => 'required|string',
-        ];
-
-        if (!$request->attributes->get('sanctum')) {
-            $attributes['device_name'] = 'required|string';
-        }
-
-        $request->validate($attributes);
-    }
 
     private function create_company($user)
     {
@@ -217,14 +230,7 @@ class LoginController extends Controller
         //                \Log::debug('Migration----------------------'.$company);
         Migration::dispatch($company, $user->name, $user->email, $user->password);
     }
-
-
-
-
-
-
     ///////
-
     //redirect to social provider
     public function redirectToProvider($provider)
     {
@@ -253,74 +259,54 @@ class LoginController extends Controller
         if (! $curUser) 
         {
             try {
-                
                 //get multi-tenancy variable from .env
                 $multiTenancyEnabled = env('MULTI_TENANCY_ENABLED', false); // Default to false if not set
                 
-                //check for multi-tenancy, if it's true then...
-                if($multiTenancyEnabled)
-                {
-                    // create person
-                    $person = new Person();
-                    $name = $user->getName();
-                    $person->name = $name;
-                    $person->email = $user->getEmail();
-                    $person->save();
+                // create person
+                $person = new Person();
+                $name = $user->getName();
+                $person->name = $name;
+                $person->email = $user->getEmail();
+                $person->save();
 
-                    // get user_group_id
-                    $user_group = UserGroup::where('name', 'Administrators')->first();
-                    if ($user_group === null) {
-                        // create user_group
-                        $user_group = UserGroup::create(['name' => 'Administrators', 'description' => 'Administrator users group']);
-                    }
-    
-                    // get role_id
-                    $role = Role::where('name', 'free')->first();
-                    if ($role === null) {
-                        $role = Role::create(['menu_id' => 1, 'name' => 'supervisor', 'display_name' => 'Supervisor', 'description' => 'Supervisor role.']);
-                    }
-    
-                    $curUser = User::create(
-                        [
-                            'email' => $user->getEmail(),
-                            'person_id' => $person->id,
-                            'group_id' => $user_group->id,
-                            'role_id' => $role->id,
-                            'email_verified_at' => now(),
-                            'is_active' => 1,
-                        ],
-                    );
-    
-                    $random = $this->unique_random('companies', 'name', 5);
-                    $company = Company::create([
-                        'name' => 'company'.$random,
+                // get user_group_id
+                $user_group = UserGroup::where('name', 'Administrators')->first();
+                if ($user_group === null) {
+                    // create user_group
+                    $user_group = UserGroup::create(['name' => 'Administrators', 'description' => 'Administrator users group']);
+                }
+
+                // get role_id
+                $role = Role::where('name', 'free')->first();
+                if ($role === null) {
+                    $role = Role::create(['menu_id' => 1, 'name' => 'supervisor', 'display_name' => 'Supervisor', 'description' => 'Supervisor role.']);
+                }
+
+                $curUser = User::create(
+                    [
                         'email' => $user->getEmail(),
-                        'is_tenant' => 1,
-                        'status' => 1,
-                    ]);
-    
-                    $person->companies()->attach($company->id, ['person_id' => $person->id, 'is_main' => 1, 'is_mandatary' => 1, 'company_id' => $company->id]);
-    
-                    // Dispatch Tenancy Jobs
-                    CreateDBs::dispatch($company);
-                    Migration::dispatch($company, $user->name, $user->email, $user->password);
-                }
+                        'person_id' => $person->id,
+                        'group_id' => $user_group->id,
+                        'role_id' => $role->id,
+                        'email_verified_at' => now(),
+                        'is_active' => 1,
+                    ],
+                );
 
-                //if multi-tenancy isn't set then create a user whithout group, company...
-                else 
-                {
-                    //i'm not sure if this creation is valid or not
-                    $curUser = User::create(
-                        [
-                            'email' => $user->getEmail(),
-                            'person_id' => $person->id,
-                            'group_id' => $user_group->id,
-                            'role_id' => $role->id,
-                            'email_verified_at' => now(),
-                            'is_active' => 1,
-                        ],
-                    );
-                }
+                $random = $this->unique_random('companies', 'name', 5);
+                $company = Company::create([
+                    'name' => 'company'.$random,
+                    'email' => $user->getEmail(),
+                    'is_tenant' => 1,
+                    'status' => 1,
+                ]);
+
+                $person->companies()->attach($company->id, ['person_id' => $person->id, 'is_main' => 1, 'is_mandatary' => 1, 'company_id' => $company->id]);
+
+                // Dispatch Tenancy Jobs
+                CreateDBs::dispatch($company);
+                Migration::dispatch($company, $user->name, $user->email, $user->password);
+            
             } catch (Exception) {
                 return redirect(config('settings.clientBaseUrl').'/social-callback?token=&status=false&message=Something went wrong!');
             }
@@ -355,6 +341,7 @@ class LoginController extends Controller
             
         //check if the user is not blocked or something
         if ($this->loggableSocialUser($curUser)) {
+            //login the user
             Auth::guard('web')->login($curUser, true);
 
             return redirect(config('settings.clientBaseUrl') . '/social-callback?token=' . csrf_token() . '&status=success&message=success');

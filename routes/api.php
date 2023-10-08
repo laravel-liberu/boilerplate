@@ -1,10 +1,9 @@
 <?php
 
-use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +22,6 @@ Route::namespace('Auth')
         Route::middleware('guest')->group(function () {
             Route::get('login/{provider}', fn($provider) => (new LoginController())->redirectToProvider($provider))->name('login.provider');
             Route::get('login/{provider}/callback', fn($provider): JsonResponse => (new LoginController())->providerCallback($provider))->name('login.provider.callback');
-
             Route::post('login', fn(Request $request) => (new LoginController())->login($request))->name('login');
         });
 
