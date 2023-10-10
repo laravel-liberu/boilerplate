@@ -22,7 +22,7 @@
         "laravel-liberu/teams": "^4.0",
         "laravel-liberu/tutorials": "^5.0",
         "laravel/cashier": "^14.12",
-        "laravel/horizon": "^5.0",
+        "laravel/horizon": "^5.21.1",
         "laravel/octane": "^2.0",
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.5",
@@ -54,6 +54,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
+        "platform": {
+            "ext-pcntl": "8.0",
+            "ext-posix": "8.0"
+        },
         "sort-packages": true,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,

@@ -88,7 +88,6 @@ class LoginController extends Controller
 
         if ($request->attributes->get('sanctum')) {
             $request->session()->regenerate();
-
             return [
                 'auth' => Auth::check(),
                 'csrfToken' => csrf_token(),
@@ -98,7 +97,8 @@ class LoginController extends Controller
 
         $token = $this->user->createToken($request->get('device_name'));
 
-        return response()->json(['token' => $token->plainTextToken])
+
+        return response()->json(['token' => $token->plainTextToken, 'user' => $this->user])
             ->cookie('webview', true)
             ->cookie('Authorization', $token->plainTextToken);
     }

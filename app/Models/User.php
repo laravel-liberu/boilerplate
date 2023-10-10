@@ -5,12 +5,13 @@ namespace App\Models;
 use App\Notifications\ResetPassword;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Laravel\Cashier\Billable;
+use Laravel\Sanctum\HasApiTokens;
 use LaravelEnso\Avatars\Models\Avatar;
 use LaravelEnso\Users\Models\User as CoreUser;
 
 class User extends CoreUser
 {
-    use Billable, CanResetPassword;
+    use Billable, CanResetPassword, HasApiTokens;
     protected $fillable = [
         'name',
         'email',
