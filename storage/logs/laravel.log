@@ -1,0 +1,15 @@
+[2023-10-13 15:15:37] local.ERROR: Class "LaravelLiberu\Enums\EnumServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"LaravelLiberu\\Enums\\EnumServiceProvider\" not found at /home/curtis/projects/new2/boilerplate/vendor/laravel-liberu/calendar/src/EnumServiceProvider.php:9)
+[stacktrace]
+#0 /home/curtis/projects/new2/boilerplate/vendor/composer/ClassLoader.php(576): include()
+#1 /home/curtis/projects/new2/boilerplate/vendor/composer/ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(206): Composer\\Autoload\\ClassLoader->loadClass()
+#3 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#4 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#5 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(745): Illuminate\\Foundation\\ProviderRepository->load()
+#6 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#7 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#8 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#9 /home/curtis/projects/new2/boilerplate/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#10 /home/curtis/projects/new2/boilerplate/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#11 {main}
+"} 

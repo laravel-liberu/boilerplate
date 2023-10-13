@@ -30,7 +30,6 @@
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
         "predis/predis": "^2.1",
-        "rakutentech/laravel-request-docs": "^2.25",
         "stancl/tenancy": "^3.5",
         "symfony/http-client": "^6.0",
         "symfony/mailgun-mailer": "^6.0"
@@ -56,8 +55,8 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "platform": {
-            "ext-pcntl": "8.0",
-            "ext-posix": "8.0"
+            "ext-pcntl": "8.2",
+            "ext-posix": "8.2"
         },
         "sort-packages": true,
         "allow-plugins": {
