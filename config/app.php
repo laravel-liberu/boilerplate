@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel Enso'),
+    'name' => env('APP_NAME', 'Laravel Liberu'),
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Bucharest',
+    'timezone' => 'Europe/London',
 
     /*
     |--------------------------------------------------------------------------
