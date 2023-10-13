@@ -2,7 +2,7 @@
 
 namespace App\Jobs\Tenant;
 
-use App\Models\enso\companies\Company;
+use App\Models\liberu\companies\Company;
 use App\Service\Tenant;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -10,7 +10,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Storage;
-use LaravelEnso\Multitenancy\Traits\ConnectionStoragePath;
+use LaravelLiberu\Multitenancy\Traits\ConnectionStoragePath;
 
 class ClearStrg implements ShouldQueue
 {

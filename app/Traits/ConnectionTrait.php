@@ -2,11 +2,11 @@
 
 namespace App\Traits;
 
-use LaravelEnso\Multitenancy\Enums\Connections;
+use LaravelLiberu\Multitenancy\Enums\Connections;
 
 trait ConnectionTrait
 {
-    public function setConnection($conn = 'mysql', $db = 'genealogy')//'enso')
+    public function setConnection($conn = 'mysql', $db = 'genealogy')//'liberu')
     {
         if ($conn === Connections::Tenant) {
             $key = 'database.connections.tenant.database';

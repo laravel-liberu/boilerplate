@@ -82,7 +82,7 @@
             "Tests\\": "tests/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "LaravelEnso\\Tables\\Tests\\": "vendor/laravel-liberu/tables/tests/"
+            "LaravelLiberu\\Tables\\Tests\\": "vendor/laravel-liberu/tables/tests/"
         }
     },
     "minimum-stability": "dev",
@@ -100,10 +100,10 @@
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "php artisan enso:localisation:merge",
+            "php artisan liberu:localisation:merge",
             "php artisan telescope:publish",
             "php artisan horizon:publish",
-            "php artisan enso:upgrade:status"
+            "php artisan liberu:upgrade:status"
         ]
     }
 }

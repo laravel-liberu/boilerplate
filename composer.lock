@@ -2071,17 +2071,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Addresses\\AppServiceProvider",
-                        "LaravelEnso\\Addresses\\CountryServiceProvider",
-                        "LaravelEnso\\Addresses\\UserServiceProvider"
+                        "LaravelLiberu\\Addresses\\AppServiceProvider",
+                        "LaravelLiberu\\Addresses\\CountryServiceProvider",
+                        "LaravelLiberu\\Addresses\\UserServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Addresses\\": "src/",
-                    "LaravelEnso\\Addresses\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Addresses\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Addresses\\": "src/",
+                    "LaravelLiberu\\Addresses\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Addresses\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2146,13 +2146,13 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Api\\AppServiceProvider"
+                        "LaravelLiberu\\Api\\AppServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Api\\": "src/"
+                    "LaravelLiberu\\Api\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2216,15 +2216,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Avatars\\AppServiceProvider",
-                        "LaravelEnso\\Avatars\\AuthServiceProvider"
+                        "LaravelLiberu\\Avatars\\AppServiceProvider",
+                        "LaravelLiberu\\Avatars\\AuthServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Avatars\\": "src/"
+                    "LaravelLiberu\\Avatars\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2292,18 +2292,18 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Calendar\\AppServiceProvider",
-                        "LaravelEnso\\Calendar\\AuthServiceProvider",
-                        "LaravelEnso\\Calendar\\CalendarServiceProvider",
-                        "LaravelEnso\\Calendar\\EnumServiceProvider",
-                        "LaravelEnso\\Calendar\\UserServiceProvider"
+                        "LaravelLiberu\\Calendar\\AppServiceProvider",
+                        "LaravelLiberu\\Calendar\\AuthServiceProvider",
+                        "LaravelLiberu\\Calendar\\CalendarServiceProvider",
+                        "LaravelLiberu\\Calendar\\EnumServiceProvider",
+                        "LaravelLiberu\\Calendar\\UserServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Calendar\\": "src/",
-                    "LaravelEnso\\Calendar\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Calendar\\": "src/",
+                    "LaravelLiberu\\Calendar\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2374,14 +2374,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Charts\\AppServiceProvider"
+                        "LaravelLiberu\\Charts\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Charts\\": "src/"
+                    "LaravelLiberu\\Charts\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2444,17 +2444,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Comments\\AppServiceProvider",
-                        "LaravelEnso\\Comments\\AuthServiceProvider",
-                        "LaravelEnso\\Comments\\UserServiceProvider"
+                        "LaravelLiberu\\Comments\\AppServiceProvider",
+                        "LaravelLiberu\\Comments\\AuthServiceProvider",
+                        "LaravelLiberu\\Comments\\UserServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Comments\\": "src/",
-                    "LaravelEnso\\Comments\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Comments\\": "src/",
+                    "LaravelLiberu\\Comments\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2523,19 +2523,19 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Companies\\AppServiceProvider",
-                        "LaravelEnso\\Companies\\AuthServiceProvider",
-                        "LaravelEnso\\Companies\\SearchServiceProvider",
-                        "LaravelEnso\\Companies\\EnumServiceProvider"
+                        "LaravelLiberu\\Companies\\AppServiceProvider",
+                        "LaravelLiberu\\Companies\\AuthServiceProvider",
+                        "LaravelLiberu\\Companies\\SearchServiceProvider",
+                        "LaravelLiberu\\Companies\\EnumServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Companies\\": "src/",
-                    "LaravelEnso\\Companies\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Companies\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Companies\\": "src/",
+                    "LaravelLiberu\\Companies\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Companies\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2599,15 +2599,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\ControlPanelApi\\AppServiceProvider"
+                        "LaravelLiberu\\ControlPanelApi\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\ControlPanelApi\\": "src/",
-                    "LaravelEnso\\ControlPanelApi\\Database\\Seeders\\": "database/seeders/"
+                    "LaravelLiberu\\ControlPanelApi\\": "src/",
+                    "LaravelLiberu\\ControlPanelApi\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2670,7 +2670,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\ControlPanelCommon\\": "src/"
+                    "LaravelLiberu\\ControlPanelCommon\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2762,20 +2762,20 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Core\\AppServiceProvider",
-                        "LaravelEnso\\Core\\BroadcastServiceProvider",
-                        "LaravelEnso\\Core\\EventServiceProvider",
-                        "LaravelEnso\\Core\\PasswordServiceProvider",
-                        "LaravelEnso\\Core\\MiddlewareServiceProvider",
-                        "LaravelEnso\\Core\\WebsocketServiceProvider"
+                        "LaravelLiberu\\Core\\AppServiceProvider",
+                        "LaravelLiberu\\Core\\BroadcastServiceProvider",
+                        "LaravelLiberu\\Core\\EventServiceProvider",
+                        "LaravelLiberu\\Core\\PasswordServiceProvider",
+                        "LaravelLiberu\\Core\\MiddlewareServiceProvider",
+                        "LaravelLiberu\\Core\\WebsocketServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Core\\": "src/",
-                    "LaravelEnso\\Core\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Core\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Core\\": "src/",
+                    "LaravelLiberu\\Core\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Core\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2805,8 +2805,8 @@
             "description": "Main requirement & dependency aggregator for Laravel Enso",
             "homepage": "https://github.com/laravel-liberu/Core",
             "keywords": [
-                "enso-aggregator",
-                "enso-core",
+                "liberu-aggregator",
+                "liberu-core",
                 "laravel-boilerplate",
                 "laravel-liberu",
                 "vue-bulma",
@@ -2854,16 +2854,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Countries\\AppServiceProvider"
+                        "LaravelLiberu\\Countries\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Countries\\": "src/",
-                    "LaravelEnso\\Countries\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Countries\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Countries\\": "src/",
+                    "LaravelLiberu\\Countries\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Countries\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2886,7 +2886,7 @@
             "description": "Countries for Laravel Enso",
             "keywords": [
                 "countries",
-                "enso",
+                "liberu",
                 "laravel-liberu",
                 "manager"
             ],
@@ -2932,16 +2932,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\DataExport\\AppServiceProvider",
-                        "LaravelEnso\\DataExport\\AuthServiceProvider",
-                        "LaravelEnso\\DataExport\\EnumServiceProvider"
+                        "LaravelLiberu\\DataExport\\AppServiceProvider",
+                        "LaravelLiberu\\DataExport\\AuthServiceProvider",
+                        "LaravelLiberu\\DataExport\\EnumServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\DataExport\\": "src/",
-                    "LaravelEnso\\DataExport\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\DataExport\\": "src/",
+                    "LaravelLiberu\\DataExport\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2960,7 +2960,7 @@
             "homepage": "https://github.com/laravel-liberu/data-export",
             "keywords": [
                 "data-export",
-                "enso-exports",
+                "liberu-exports",
                 "laravel-liberu"
             ],
             "support": {
@@ -3010,16 +3010,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\DataImport\\AppServiceProvider",
-                        "LaravelEnso\\DataImport\\EnumServiceProvider"
+                        "LaravelLiberu\\DataImport\\AppServiceProvider",
+                        "LaravelLiberu\\DataImport\\EnumServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\DataImport\\": "src/",
-                    "LaravelEnso\\DataImport\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\DataImport\\": "src/",
+                    "LaravelLiberu\\DataImport\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3088,16 +3088,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Discussions\\AppServiceProvider",
-                        "LaravelEnso\\Discussions\\AuthServiceProvider"
+                        "LaravelLiberu\\Discussions\\AppServiceProvider",
+                        "LaravelLiberu\\Discussions\\AuthServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Discussions\\": "src/",
-                    "LaravelEnso\\Discussions\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Discussions\\": "src/",
+                    "LaravelLiberu\\Discussions\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3160,15 +3160,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Documents\\AppServiceProvider",
-                        "LaravelEnso\\Documents\\AuthServiceProvider"
+                        "LaravelLiberu\\Documents\\AppServiceProvider",
+                        "LaravelLiberu\\Documents\\AuthServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Documents\\": "src/"
+                    "LaravelLiberu\\Documents\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3227,7 +3227,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\DynamicMethods\\": "src/"
+                    "LaravelLiberu\\DynamicMethods\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3282,17 +3282,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Enums\\AppServiceProvider",
-                        "LaravelEnso\\Enums\\EnumServiceProvider"
+                        "LaravelLiberu\\Enums\\AppServiceProvider",
+                        "LaravelLiberu\\Enums\\EnumServiceProvider"
                     ],
                     "aliases": {
-                        "Enums": "LaravelEnso\\Enums\\Facades\\Enums"
+                        "Enums": "LaravelLiberu\\Enums\\Facades\\Enums"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Enums\\": "src/"
+                    "LaravelLiberu\\Enums\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3349,7 +3349,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Excel\\": "src/"
+                    "LaravelLiberu\\Excel\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3423,17 +3423,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Files\\AppServiceProvider",
-                        "LaravelEnso\\Files\\AuthServiceProvider",
-                        "LaravelEnso\\Files\\EnumServiceProvider"
+                        "LaravelLiberu\\Files\\AppServiceProvider",
+                        "LaravelLiberu\\Files\\AuthServiceProvider",
+                        "LaravelLiberu\\Files\\EnumServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Files\\": "src/",
-                    "LaravelEnso\\Files\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Files\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Files\\": "src/",
+                    "LaravelLiberu\\Files\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Files\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3493,7 +3493,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Filters\\": "src/"
+                    "LaravelLiberu\\Filters\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3554,14 +3554,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Forms\\AppServiceProvider"
+                        "LaravelLiberu\\Forms\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Forms\\": "src/"
+                    "LaravelLiberu\\Forms\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3623,14 +3623,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Google\\AppServiceProvider"
+                        "LaravelLiberu\\Google\\AppServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Google\\": "src/",
-                    "LaravelEnso\\Google\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Google\\": "src/",
+                    "LaravelLiberu\\Google\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3692,13 +3692,13 @@
             "extra": {
                 "laravel": {
                     "aliases": {
-                        "EnsoException": "LaravelEnso\\Helpers\\Exceptions\\EnsoException"
+                        "EnsoException": "LaravelLiberu\\Helpers\\Exceptions\\EnsoException"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Helpers\\": "src/"
+                    "LaravelLiberu\\Helpers\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3755,7 +3755,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\HistoryTracker\\": "src/"
+                    "LaravelLiberu\\HistoryTracker\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3815,14 +3815,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\HowTo\\AppServiceProvider"
+                        "LaravelLiberu\\HowTo\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\HowTo\\": "src/"
+                    "LaravelLiberu\\HowTo\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3890,7 +3890,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\ImageTransformer\\": "src/"
+                    "LaravelLiberu\\ImageTransformer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3951,15 +3951,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Impersonate\\AppServiceProvider",
-                        "LaravelEnso\\Impersonate\\AuthServiceProvider"
+                        "LaravelLiberu\\Impersonate\\AppServiceProvider",
+                        "LaravelLiberu\\Impersonate\\AuthServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Impersonate\\": "src/"
+                    "LaravelLiberu\\Impersonate\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4018,16 +4018,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\IO\\BroadcastServiceProvider",
-                        "LaravelEnso\\IO\\WebsocketServiceProvider",
-                        "LaravelEnso\\IO\\EnumServiceProvider"
+                        "LaravelLiberu\\IO\\BroadcastServiceProvider",
+                        "LaravelLiberu\\IO\\WebsocketServiceProvider",
+                        "LaravelLiberu\\IO\\EnumServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\IO\\": "src/"
+                    "LaravelLiberu\\IO\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4091,17 +4091,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Localisation\\AppServiceProvider",
-                        "LaravelEnso\\Localisation\\AuthServiceProvider"
+                        "LaravelLiberu\\Localisation\\AppServiceProvider",
+                        "LaravelLiberu\\Localisation\\AuthServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Localisation\\": "src/",
-                    "LaravelEnso\\Localisation\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Localisation\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Localisation\\": "src/",
+                    "LaravelLiberu\\Localisation\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Localisation\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4160,14 +4160,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Logs\\AppServiceProvider"
+                        "LaravelLiberu\\Logs\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Logs\\": "src/"
+                    "LaravelLiberu\\Logs\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4231,15 +4231,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Menus\\AppServiceProvider"
+                        "LaravelLiberu\\Menus\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Menus\\": "src/",
-                    "LaravelEnso\\Menus\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Menus\\": "src/",
+                    "LaravelLiberu\\Menus\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4300,7 +4300,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Migrator\\": "src/"
+                    "LaravelLiberu\\Migrator\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4319,7 +4319,7 @@
             "homepage": "https://github.com/laravel-liberu/migrator",
             "keywords": [
                 "Structures",
-                "enso-helper",
+                "liberu-helper",
                 "laravel-liberu",
                 "migrator"
             ],
@@ -4361,15 +4361,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Notifications\\AppServiceProvider",
-                        "LaravelEnso\\Notifications\\BroadcastServiceProvider"
+                        "LaravelLiberu\\Notifications\\AppServiceProvider",
+                        "LaravelLiberu\\Notifications\\BroadcastServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Notifications\\": "src/"
+                    "LaravelLiberu\\Notifications\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4384,7 +4384,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Push notifications dependency for LaravelEnso",
+            "description": "Push notifications dependency for LaravelLiberu",
             "homepage": "https://github.com/laravel-liberu/notifications",
             "keywords": [
                 "laravel-liberu",
@@ -4427,7 +4427,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Ocr\\": "src/"
+                    "LaravelLiberu\\Ocr\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4498,7 +4498,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Pdf\\": "src/"
+                    "LaravelLiberu\\Pdf\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4578,16 +4578,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\People\\AppServiceProvider",
-                        "LaravelEnso\\People\\AuthServiceProvider",
-                        "LaravelEnso\\People\\SearchServiceProvider"
+                        "LaravelLiberu\\People\\AppServiceProvider",
+                        "LaravelLiberu\\People\\AuthServiceProvider",
+                        "LaravelLiberu\\People\\SearchServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\People\\": "src/",
-                    "LaravelEnso\\People\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\People\\": "src/",
+                    "LaravelLiberu\\People\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4648,17 +4648,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Permissions\\AppServiceProvider",
-                        "LaravelEnso\\Permissions\\AuthServiceProvider",
-                        "LaravelEnso\\Permissions\\EnumServiceProvider"
+                        "LaravelLiberu\\Permissions\\AppServiceProvider",
+                        "LaravelLiberu\\Permissions\\AuthServiceProvider",
+                        "LaravelLiberu\\Permissions\\EnumServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Permissions\\": "src/",
-                    "LaravelEnso\\Permissions\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Permissions\\": "src/",
+                    "LaravelLiberu\\Permissions\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4773,14 +4773,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Rememberable\\AppServiceProvider"
+                        "LaravelLiberu\\Rememberable\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Rememberable\\": "src/"
+                    "LaravelLiberu\\Rememberable\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4847,17 +4847,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Roles\\AppServiceProvider",
-                        "LaravelEnso\\Roles\\EnumServiceProvider"
+                        "LaravelLiberu\\Roles\\AppServiceProvider",
+                        "LaravelLiberu\\Roles\\EnumServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Roles\\": "src/",
-                    "LaravelEnso\\Roles\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Roles\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Roles\\": "src/",
+                    "LaravelLiberu\\Roles\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Roles\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4919,17 +4919,17 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Searchable\\AppServiceProvider",
-                        "LaravelEnso\\Searchable\\SearchServiceProvider"
+                        "LaravelLiberu\\Searchable\\AppServiceProvider",
+                        "LaravelLiberu\\Searchable\\SearchServiceProvider"
                     ],
                     "aliases": {
-                        "Search": "LaravelEnso\\Searchable\\Facades\\Search"
+                        "Search": "LaravelLiberu\\Searchable\\Facades\\Search"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Searchable\\": "src/"
+                    "LaravelLiberu\\Searchable\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4989,14 +4989,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Select\\AppServiceProvider"
+                        "LaravelLiberu\\Select\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Select\\": "src/"
+                    "LaravelLiberu\\Select\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5056,13 +5056,13 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Sentry\\AppServiceProvider"
+                        "LaravelLiberu\\Sentry\\AppServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Sentry\\": "src/"
+                    "LaravelLiberu\\Sentry\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5129,14 +5129,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Tables\\AppServiceProvider"
+                        "LaravelLiberu\\Tables\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Tables\\": "src/"
+                    "LaravelLiberu\\Tables\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5193,18 +5193,18 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Tasks\\AppServiceProvider",
-                        "LaravelEnso\\Tasks\\AuthServiceProvider",
-                        "LaravelEnso\\Tasks\\BroadcastServiceProvider",
-                        "LaravelEnso\\Tasks\\WebsocketServiceProvider",
-                        "LaravelEnso\\Tasks\\EnumServiceProvider"
+                        "LaravelLiberu\\Tasks\\AppServiceProvider",
+                        "LaravelLiberu\\Tasks\\AuthServiceProvider",
+                        "LaravelLiberu\\Tasks\\BroadcastServiceProvider",
+                        "LaravelLiberu\\Tasks\\WebsocketServiceProvider",
+                        "LaravelLiberu\\Tasks\\EnumServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Tasks\\": "src/",
-                    "LaravelEnso\\Tasks\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Tasks\\": "src/",
+                    "LaravelLiberu\\Tasks\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5272,15 +5272,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Teams\\AppServiceProvider",
-                        "LaravelEnso\\Teams\\SearchServiceProvider"
+                        "LaravelLiberu\\Teams\\AppServiceProvider",
+                        "LaravelLiberu\\Teams\\SearchServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Teams\\": "src/"
+                    "LaravelLiberu\\Teams\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5338,7 +5338,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\TrackWho\\": "src/"
+                    "LaravelLiberu\\TrackWho\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5402,15 +5402,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Tutorials\\AppServiceProvider"
+                        "LaravelLiberu\\Tutorials\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Tutorials\\": "src/",
-                    "LaravelEnso\\Tutorials\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Tutorials\\": "src/",
+                    "LaravelLiberu\\Tutorials\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5473,14 +5473,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Upgrade\\AppServiceProvider"
+                        "LaravelLiberu\\Upgrade\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Upgrade\\": "src/"
+                    "LaravelLiberu\\Upgrade\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5545,15 +5545,15 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\UserGroups\\AppServiceProvider"
+                        "LaravelLiberu\\UserGroups\\AppServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\UserGroups\\": "src/",
-                    "LaravelEnso\\UserGroups\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\UserGroups\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\UserGroups\\": "src/",
+                    "LaravelLiberu\\UserGroups\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\UserGroups\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5636,16 +5636,16 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Users\\AppServiceProvider",
-                        "LaravelEnso\\Users\\AuthServiceProvider"
+                        "LaravelLiberu\\Users\\AppServiceProvider",
+                        "LaravelLiberu\\Users\\AuthServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Users\\": "src/",
-                    "LaravelEnso\\Users\\Database\\Seeders\\": "database/seeders/",
-                    "LaravelEnso\\Users\\Database\\Factories\\": "database/factories/"
+                    "LaravelLiberu\\Users\\": "src/",
+                    "LaravelLiberu\\Users\\Database\\Seeders\\": "database/seeders/",
+                    "LaravelLiberu\\Users\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5675,7 +5675,7 @@
             "description": "Users dependency for Laravel Enso",
             "homepage": "https://www.laravel-liberu.com",
             "keywords": [
-                "enso-users",
+                "liberu-users",
                 "laravel-liberu",
                 "vue-bulma",
                 "vue-spa"
@@ -13307,8 +13307,8 @@
             ],
             "authors": [
                 {
-                    "name": "John Stevenson",
-                    "email": "john-stevenson@blueyonder.co.uk"
+                    "name": "John Stevliberun",
+                    "email": "john-stevliberun@blueyonder.co.uk"
                 }
             ],
             "description": "Restarts a process without Xdebug.",
@@ -13953,14 +13953,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Cli\\AppServiceProvider"
+                        "LaravelLiberu\\Cli\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Cli\\": "src/"
+                    "LaravelLiberu\\Cli\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -13979,7 +13979,7 @@
             "homepage": "https://github.com/laravel-liberu/cli",
             "keywords": [
                 "cli",
-                "enso-helper",
+                "liberu-helper",
                 "laravel-liberu"
             ],
             "support": {
@@ -14013,7 +14013,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\PHPUnitPrettyPrint\\": "src/"
+                    "LaravelLiberu\\PHPUnitPrettyPrint\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -14810,7 +14810,7 @@
             "authors": [
                 {
                     "name": "Jaap van Otterdijk",
-                    "email": "opensource@ijaap.nl"
+                    "email": "opliberuurce@ijaap.nl"
                 }
             ],
             "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
