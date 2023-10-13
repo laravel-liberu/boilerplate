@@ -33,6 +33,7 @@ class Kernel extends HttpKernel
         'api' => [
             \LaravelEnso\Core\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Rakutentech\LaravelRequestDocs\LaravelRequestDocsMiddleware::class,
             'throttle:api',
         ],
     ];
