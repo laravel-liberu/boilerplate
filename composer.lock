@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53022cc65025f2c9da083442a4af5e8f",
+    "content-hash": "711d70d7f2f6a11b5795b835fecc4507",
     "packages": [
         {
             "name": "barryvdh/laravel-snappy",
@@ -3189,37 +3189,40 @@
         },
         {
             "name": "laravel-liberu/enums",
-            "version": "v2.2.4",
+            "version": "v2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-liberu/enums.git",
-                "reference": "e368bdb318bc0b7a580fbcd4c8d82ad4ebccf694"
+                "reference": "8c22030c5ce763413531119b424f519f114ba218"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-liberu/enums/zipball/e368bdb318bc0b7a580fbcd4c8d82ad4ebccf694",
-                "reference": "e368bdb318bc0b7a580fbcd4c8d82ad4ebccf694",
+                "url": "https://api.github.com/repos/laravel-liberu/enums/zipball/8c22030c5ce763413531119b424f519f114ba218",
+                "reference": "8c22030c5ce763413531119b424f519f114ba218",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "^7.0|^8.0|^9.0|^10.0",
                 "php": ">=7.4.0"
             },
+            "require-dev": {
+                "rector/rector": "^0.17.0"
+            },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Enums\\AppServiceProvider",
-                        "LaravelEnso\\Enums\\EnumServiceProvider"
+                        "LaravelLiberu\\Enums\\AppServiceProvider",
+                        "LaravelLiberu\\Enums\\EnumServiceProvider"
                     ],
                     "aliases": {
-                        "Enums": "LaravelEnso\\Enums\\Facades\\Enums"
+                        "Enums": "LaravelLiberu\\Enums\\Facades\\Enums"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Enums\\": "src/"
+                    "LaravelLiberu\\Enums\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3248,9 +3251,15 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-liberu/enums/issues",
-                "source": "https://github.com/laravel-liberu/enums/tree/v2.2.4"
+                "source": "https://github.com/laravel-liberu/enums/tree/v2.2.6"
             },
-            "time": "2023-05-24T12:11:42+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/laravel-liberu",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-13T01:33:43+00:00"
         },
         {
             "name": "laravel-liberu/excel",
@@ -3397,7 +3406,7 @@
         },
         {
             "name": "laravel-liberu/filters",
-            "version": "v2.1.8",
+            "version": "v2.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-liberu/filters.git",
@@ -3444,7 +3453,7 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-liberu/filters/issues",
-                "source": "https://github.com/laravel-liberu/filters/tree/v2.1.8"
+                "source": "https://github.com/laravel-liberu/filters/tree/v2.1.9"
             },
             "funding": [
                 {
@@ -5030,16 +5039,16 @@
         },
         {
             "name": "laravel-liberu/tables",
-            "version": "v4.16.1",
+            "version": "v4.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-liberu/tables.git",
-                "reference": "228bfa15333e66ce9d258191ed232d752c521497"
+                "reference": "8a90821d536933a866e452771a110630342d87eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-liberu/tables/zipball/228bfa15333e66ce9d258191ed232d752c521497",
-                "reference": "228bfa15333e66ce9d258191ed232d752c521497",
+                "url": "https://api.github.com/repos/laravel-liberu/tables/zipball/8a90821d536933a866e452771a110630342d87eb",
+                "reference": "8a90821d536933a866e452771a110630342d87eb",
                 "shasum": ""
             },
             "require": {
@@ -5050,18 +5059,21 @@
                 "laravel/framework": "^9.0|^10.0",
                 "php": ">=8.0"
             },
+            "require-dev": {
+                "rector/rector": "^0.17.0"
+            },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Tables\\AppServiceProvider"
+                        "LaravelLiberu\\Tables\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Tables\\": "src/"
+                    "LaravelLiberu\\Tables\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5072,12 +5084,10 @@
                 {
                     "name": "Adrian Ocneanu",
                     "email": "aocneanu@gmail.com",
-                    "homepage": "https://laravel-liberu.com",
                     "role": "Developer"
                 }
             ],
             "description": "Data Table library with server-side processing and a VueJS component",
-            "homepage": "https://github.com/laravel-liberu/tables",
             "keywords": [
                 "data-table",
                 "data-table-server-side",
@@ -5086,9 +5096,15 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-liberu/tables/issues",
-                "source": "https://github.com/laravel-liberu/tables/tree/v4.16.1"
+                "source": "https://github.com/laravel-liberu/tables/tree/v4.16.2"
             },
-            "time": "2023-05-24T12:26:29+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/laravel-liberu",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-13T06:22:17+00:00"
         },
         {
             "name": "laravel-liberu/tasks",
@@ -5903,84 +5919,6 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2023-10-10T13:01:37+00:00"
-        },
-        {
-            "name": "laravel/horizon",
-            "version": "v5.21.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/horizon.git",
-                "reference": "ded3632dca7fd66618d5b712b4a0c6c1c77ecb3f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/ded3632dca7fd66618d5b712b4a0c6c1c77ecb3f",
-                "reference": "ded3632dca7fd66618d5b712b4a0c6c1c77ecb3f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-pcntl": "*",
-                "ext-posix": "*",
-                "illuminate/contracts": "^8.17|^9.0|^10.0",
-                "illuminate/queue": "^8.17|^9.0|^10.0",
-                "illuminate/support": "^8.17|^9.0|^10.0",
-                "nesbot/carbon": "^2.17",
-                "php": "^7.3|^8.0",
-                "ramsey/uuid": "^4.0",
-                "symfony/error-handler": "^5.0|^6.0",
-                "symfony/process": "^5.0|^6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^6.0|^7.0|^8.0",
-                "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^9.0",
-                "predis/predis": "^1.1|^2.0"
-            },
-            "suggest": {
-                "ext-redis": "Required to use the Redis PHP driver.",
-                "predis/predis": "Required when not using the Redis PHP driver (^1.1|^2.0)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Horizon\\HorizonServiceProvider"
-                    ],
-                    "aliases": {
-                        "Horizon": "Laravel\\Horizon\\Horizon"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Horizon\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Dashboard and code-driven configuration for Laravel queues.",
-            "keywords": [
-                "laravel",
-                "queue"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.21.1"
-            },
-            "time": "2023-09-19T22:42:19+00:00"
         },
         {
             "name": "laravel/octane",
@@ -13650,16 +13588,16 @@
         },
         {
             "name": "laravel-liberu/cli",
-            "version": "v5.0.6",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-liberu/cli.git",
-                "reference": "11ff81e98b61a64e4ac84aa620f2ac706fc1c49d"
+                "reference": "f953cdad3fb8fbb6fb31278c0e41e43dff7b8c7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-liberu/cli/zipball/11ff81e98b61a64e4ac84aa620f2ac706fc1c49d",
-                "reference": "11ff81e98b61a64e4ac84aa620f2ac706fc1c49d",
+                "url": "https://api.github.com/repos/laravel-liberu/cli/zipball/f953cdad3fb8fbb6fb31278c0e41e43dff7b8c7c",
+                "reference": "f953cdad3fb8fbb6fb31278c0e41e43dff7b8c7c",
                 "shasum": ""
             },
             "require": {
@@ -13677,14 +13615,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelEnso\\Cli\\AppServiceProvider"
+                        "LaravelLiberu\\Cli\\AppServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelEnso\\Cli\\": "src/"
+                    "LaravelLiberu\\Cli\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -13703,14 +13641,20 @@
             "homepage": "https://github.com/laravel-liberu/cli",
             "keywords": [
                 "cli",
-                "enso-helper",
-                "laravel-liberu"
+                "laravel-liberu",
+                "liberu-helper"
             ],
             "support": {
                 "issues": "https://github.com/laravel-liberu/cli/issues",
-                "source": "https://github.com/laravel-liberu/cli/tree/v5.0.6"
+                "source": "https://github.com/laravel-liberu/cli/tree/v5.0.7"
             },
-            "time": "2023-06-12T08:17:46+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/laravel-liberu",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-13T01:20:44+00:00"
         },
         {
             "name": "laravel-liberu/phpunit-pretty-print",
