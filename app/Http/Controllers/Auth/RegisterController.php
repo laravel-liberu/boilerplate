@@ -36,6 +36,14 @@ class RegisterController extends Controller
         ]);
     }
 
+    /**
+     * @LRDparam first_name required|string|max:255
+     * @LRDparam last_name required|string|max:255
+     * @LRDparam email required|string|email|max:255|unique:users
+     * @LRDparam password required|string|min:5|confirmed
+     *
+     * @LRDparam responses 200,422
+     */
     public function create(Request $request)
     {
         $validator = $this->validator($request->all());
